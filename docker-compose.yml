@@ -1,0 +1,29 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_PASSWORD: docsearch
+      POSTGRES_DB: docsearch
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d docsearch"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  migrate:
+    build: .
+    command: ["migrate"]
+    environment: &settings
+      DATABASE_URL: postgres://postgres:docsearch@db:5432/docsearch
+      DOCSEARCH_TOKEN: change-me
+      TEXT_SEARCH_CONFIG: english
+    depends_on:
+      db: { condition: service_healthy }
+
+  api:
+    build: .
+    environment: *settings
+    ports: ["8080:8080"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }

@@ -1,0 +1,86 @@
+{
+  "name": "support-desk",
+  "note": "A small internal help desk. Queries are written the way colleagues actually type them, including typos and words the documents never use.",
+  "documents": [
+    {
+      "id": "refunds",
+      "title": "Refund policy",
+      "body": "We refund unopened goods within 30 days of delivery. Shipping costs are not refunded unless the item arrived damaged or the wrong item was sent. To start a return, email support with your order number and a photograph of the packaging. Refunds are paid back to the card used for the purchase and take three to five banking days to appear."
+    },
+    {
+      "id": "warranty",
+      "title": "Warranty terms",
+      "body": "Every machine carries a two year warranty against manufacturing defects. The warranty does not cover wear parts such as belts, filters and blades, nor damage from use outside the manual. Repairs under warranty are carried out at our workshop and transport is arranged by us. Keep the receipt; without it the warranty starts from the date of manufacture."
+    },
+    {
+      "id": "invoicing",
+      "title": "Invoicing and payment terms",
+      "body": "Invoices are sent by email on the day the order ships, with thirty days to pay. Late payment carries interest at the reference rate plus eight percentage points. Ask the finance team for a different arrangement before the order is placed. Partial payment does not stop interest running on the rest."
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery times and freight",
+      "body": "Stocked items leave the warehouse the same day if the order is placed before two in the afternoon. Freight to mainland addresses takes one to three working days. Island addresses and the far north take longer and the carrier decides the exact day. Heavy goods are delivered kerbside, not carried indoors."
+    },
+    {
+      "id": "installation",
+      "title": "Installation and first start",
+      "body": "A machine must stand level on a firm floor before it is switched on. Connect water before power. Run one empty cycle to flush the hoses. If the display shows a code during the first cycle, note the code and call support rather than switching the machine off and on repeatedly."
+    },
+    {
+      "id": "service-plan",
+      "title": "Service plans",
+      "body": "A service plan covers one scheduled visit a year plus priority on call-outs. The plan does not include wear parts, which are invoiced separately at list price. Plans run for twelve months and renew unless cancelled a month before the end date."
+    },
+    {
+      "id": "spare-parts",
+      "title": "Ordering spare parts",
+      "body": "Spare parts are ordered with the machine serial number, which is on the plate behind the lower panel. Parts held in stock ship the same day. Parts from the manufacturer take two to four weeks. We do not sell parts for machines older than fifteen years."
+    },
+    {
+      "id": "account-access",
+      "title": "Signing in to the customer portal",
+      "body": "Each company has one administrator who invites colleagues to the portal. A forgotten password is reset from the sign in page; the link is valid for one hour. If nobody at the company can sign in any longer, support can transfer the administrator role after confirming the request by telephone."
+    },
+    {
+      "id": "data-handling",
+      "title": "How we handle customer data",
+      "body": "Order data is kept for seven years because accounting law requires it. Contact details are removed on request unless they sit on an invoice. Support conversations are kept for two years. We do not sell data and we do not use it for advertising."
+    },
+    {
+      "id": "complaints",
+      "title": "Making a complaint",
+      "body": "A complaint is made in writing within a reasonable time of noticing the fault. Describe the fault, when it appeared and what the machine was doing. We answer within five working days. If we disagree about the fault, an independent inspection decides and the losing side pays for it."
+    },
+    {
+      "id": "opening-hours",
+      "title": "Opening hours and reaching us",
+      "body": "The office is open weekdays from eight to five, closed on public holidays. Support takes calls from eight to four and answers email the same day. Outside those hours urgent breakdowns go to the on call number, which is for machines that have stopped, not for ordering."
+    },
+    {
+      "id": "returns-shipping",
+      "title": "Packing a return",
+      "body": "Use the original carton if you still have it. Otherwise pack the item so nothing moves when the box is shaken. Write the return number on the outside of the box, not on the product. Returns that arrive damaged because of poor packing are refused and sent back at the sender's cost."
+    }
+  ],
+  "queries": [
+    { "query": "how long do I have to send something back", "relevant": ["refunds"] },
+    { "query": "money back on an unopened box", "relevant": ["refunds"] },
+    { "query": "refnud policy", "relevant": ["refunds"] },
+    { "query": "are belts covered", "relevant": ["warranty"] },
+    { "query": "warrenty on a two year old machine", "relevant": ["warranty"] },
+    { "query": "what happens if I pay the invoice late", "relevant": ["invoicing"] },
+    { "query": "invoicing terms", "relevant": ["invoicing"] },
+    { "query": "when will my order arrive", "relevant": ["delivery"] },
+    { "query": "kerbside heavy goods", "relevant": ["delivery"] },
+    { "query": "error code on the display the first time", "relevant": ["installation"] },
+    { "query": "serial number for a spare part", "relevant": ["spare-parts"] },
+    { "query": "sparepart orders", "relevant": ["spare-parts"] },
+    { "query": "forgot my password", "relevant": ["account-access"] },
+    { "query": "how long is order data kept", "relevant": ["data-handling"] },
+    { "query": "someone to answer at seven in the evening", "relevant": ["opening-hours"] },
+    { "query": "how do I pack the box for a return", "relevant": ["returns-shipping", "refunds"] },
+    { "query": "yearly visit included", "relevant": ["service-plan"] },
+    { "query": "complaing about a fault", "relevant": ["complaints"] }
+  ]
+}

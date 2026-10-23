@@ -1,0 +1,26 @@
+{
+  "name": "docsearch",
+  "version": "0.1.0",
+  "description": "Hybrid search over your own documents: Postgres full-text and pgvector, combined with reciprocal rank fusion, behind a small HTTP API.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "bin": { "docsearch": "./dist/bin.js" },
+  "exports": { ".": "./dist/index.js" },
+  "files": ["dist", "migrations"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "eval": "node --experimental-strip-types eval/run.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.2.17",
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "typescript": "^5.7.2"
+  }
+}
